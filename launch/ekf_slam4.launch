@@ -1,0 +1,9 @@
+<launch>
+  <node pkg="robot_localization" type="ekf_localization_node" name="ekf_amcl_imu_encoder" clear_params="true">
+    <rosparam command="load" file="$(find robot_localization)/params/ekf_slam4.yaml" />
+
+    <!--Placeholder for output topic remapping-->
+    <remap from="odometry/filtered" to="/odom"/>   
+
+  </node>
+</launch>
